@@ -24,7 +24,7 @@
 
   <div class="nearest_station">
     <%= form.fields_for :nearest_stations, @nearest_station do |f| %>
-      <h4>最寄り駅</h4>
+      <h4>最寄り駅<%= f.index + 1 %></h4>
         <%= f.label :line, '路線名' %>
         <%= f.text_field :line %>
         <%= f.label :station, '駅名' %>
