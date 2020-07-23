@@ -28,9 +28,10 @@
 
 <br>
 
-<% @nearest_stations.each do |f| %>
+<% @nearest_stations.each_with_index do |f, i| %>
   <% if @property.nearest_stations.any? %>
-  <h4>最寄り駅</h4>
+  <h4>最寄り駅<%= i + 1 %></h4>
+
   <p>
   <strong>路線:</strong>
   <%= f.line %>
