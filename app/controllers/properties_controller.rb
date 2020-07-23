@@ -10,18 +10,17 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @nearest_stations = @property.nearest_stations
   end
 
   # GET /properties/new
   def new
     @property = Property.new
-    #@nearest_station = NearestStation.new
     2.times { @property.nearest_stations.build }
   end
 
   # GET /properties/1/edit
   def edit
-    # 2.times { @property.nearest_stations.build }
     @property.nearest_stations.build
   end
 
